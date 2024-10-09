@@ -62,3 +62,6 @@ programa.buscarEstudiantes("Asdf"); //No aparecen estudiantes
 double promedioGlobal = programa.CalcularPromedioGlobal();
 Console.WriteLine($"\n---Promedio global---");
 Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
+//Ver el reporte de un estudiante
+Console.WriteLine($"\n---Reporte de un estudiante---");
+programa.GenerarReporteCalificacion(estudiante1);

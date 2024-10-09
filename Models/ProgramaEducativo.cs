@@ -88,4 +88,21 @@ class ProgramaEducativo
         }
         return sumaPromedios / contadorEstudiantes;
     }
+    //función para generar un reporte de calificación de un estudiante
+    public void GenerarReporteCalificacion(Estudiante estudiante)
+    {
+
+        Console.WriteLine("Reporte de calificación del estudiante: " + estudiante.Nombre);
+        estudiante.MostrarCalificaciones();
+        Console.WriteLine($"\n---Asignaturas de un alumno---");
+        foreach (var asignatura in estudiante.calificaciones)
+        {
+
+            Console.WriteLine("Asignaturas impartidas al alumno: " + asignatura.Key.Nombre);
+        }
+        Console.WriteLine($"\n---Promedio del estudiante---");
+
+        Console.WriteLine("El promedio del estudiante " + estudiante.Nombre + " es: " + estudiante.CalcularPromedio());
+
+    }
 }
