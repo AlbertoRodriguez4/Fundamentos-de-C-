@@ -12,3 +12,18 @@ C:\Users\altf4\Desktop\Desarrollo web en entorno servidor\dia 1\obj\Debug\net8.0
 C:\Users\altf4\Desktop\Desarrollo web en entorno servidor\dia 1\obj\Debug\net8.0\dia 1.pdb
 C:\Users\altf4\Desktop\Desarrollo web en entorno servidor\dia 1\obj\Debug\net8.0\dia 1.genruntimeconfig.cache
 C:\Users\altf4\Desktop\Desarrollo web en entorno servidor\dia 1\obj\Debug\net8.0\ref\dia 1.dll
+C:\Users\altf4\Desktop\Fundamentos-de-C#\bin\Debug\net8.0\dia 1.exe
+C:\Users\altf4\Desktop\Fundamentos-de-C#\bin\Debug\net8.0\dia 1.deps.json
+C:\Users\altf4\Desktop\Fundamentos-de-C#\bin\Debug\net8.0\dia 1.runtimeconfig.json
+C:\Users\altf4\Desktop\Fundamentos-de-C#\bin\Debug\net8.0\dia 1.dll
+C:\Users\altf4\Desktop\Fundamentos-de-C#\bin\Debug\net8.0\dia 1.pdb
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.AssemblyInfoInputs.cache
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.AssemblyInfo.cs
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.csproj.CoreCompileInputs.cache
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.sourcelink.json
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.dll
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\refint\dia 1.dll
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.pdb
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\dia 1.genruntimeconfig.cache
+C:\Users\altf4\Desktop\Fundamentos-de-C#\obj\Debug\net8.0\ref\dia 1.dll

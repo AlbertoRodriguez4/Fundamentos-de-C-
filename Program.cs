@@ -14,8 +14,6 @@ Asignatura diseño = new Asignatura("Diseño", 4);
 Estudiante estudiante1 = new Estudiante("Estudiante 1");
 Estudiante estudiante2 = new Estudiante("Estudiante 2");
 Estudiante estudiante3 = new Estudiante("Estudiante 3");
-Estudiante estudiante4 = new Estudiante("Estudiante 4");
-Estudiante estudiante5 = new Estudiante("Estudiante 5");
 //Añadir estudiantes al programa educativo
 programa.AgregarEstudiante(estudiante1);
 programa.AgregarEstudiante(estudiante2);
@@ -49,4 +47,6 @@ List<Estudiante> lstEstudiantes = new List<Estudiante>();
 double promedioGlobal = programa.CalcularPromedioGlobal();
 Console.WriteLine($"\n---Promedio global---");
 Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
-Console.WriteLine(34.40M);
+//modificar asignatura
+Console.WriteLine($"\n---Modificando nota al alumno---");
+estudiante1.modificarNotaAlumno(cliente, 9);

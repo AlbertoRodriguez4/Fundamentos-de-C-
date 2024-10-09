@@ -3,7 +3,7 @@ namespace Models;
 class Asignatura
 {
     public string Nombre { get; set; }
-    public int Creditos { get; set; }
+    public double Creditos { get; set; }
     public Asignatura(string nombre, int creditos)
     {
         Nombre = nombre;
@@ -13,4 +13,5 @@ class Asignatura
     {
         Console.WriteLine($"Asignatura: {Nombre}, Creditos: {Creditos}");
     }
+   
 }

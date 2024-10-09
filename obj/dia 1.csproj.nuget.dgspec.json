@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\altf4\\Desktop\\Desarrollo web en entorno servidor\\dia 1\\dia 1.csproj": {}
+    "C:\\Users\\altf4\\Desktop\\Fundamentos-de-C#\\dia 1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\altf4\\Desktop\\Desarrollo web en entorno servidor\\dia 1\\dia 1.csproj": {
+    "C:\\Users\\altf4\\Desktop\\Fundamentos-de-C#\\dia 1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\altf4\\Desktop\\Desarrollo web en entorno servidor\\dia 1\\dia 1.csproj",
+        "projectUniqueName": "C:\\Users\\altf4\\Desktop\\Fundamentos-de-C#\\dia 1.csproj",
         "projectName": "dia 1",
-        "projectPath": "C:\\Users\\altf4\\Desktop\\Desarrollo web en entorno servidor\\dia 1\\dia 1.csproj",
+        "projectPath": "C:\\Users\\altf4\\Desktop\\Fundamentos-de-C#\\dia 1.csproj",
         "packagesPath": "C:\\Users\\altf4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\altf4\\Desktop\\Desarrollo web en entorno servidor\\dia 1\\obj\\",
+        "outputPath": "C:\\Users\\altf4\\Desktop\\Fundamentos-de-C#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\altf4\\AppData\\Roaming\\NuGet\\NuGet.Config"
