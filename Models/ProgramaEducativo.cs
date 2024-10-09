@@ -5,9 +5,11 @@ namespace Models;
 class ProgramaEducativo
 {
     private List<Estudiante> estudiantes;
+    private List<Asignatura> asignaturas = new List<Asignatura>();
     public ProgramaEducativo()
     {
         estudiantes = new List<Estudiante>();
+
     }
     public void AgregarEstudiante(Estudiante estudiante)
     {
@@ -103,6 +105,19 @@ class ProgramaEducativo
         Console.WriteLine($"\n---Promedio del estudiante---");
 
         Console.WriteLine("El promedio del estudiante " + estudiante.Nombre + " es: " + estudiante.CalcularPromedio());
-
     }
+    //Agregar asignaturas a una lista global
+    public void AgregarAsignatura(Asignatura asignatura)
+    {
+        if (asignaturas.Exists(a => a.Nombre.Equals(asignatura.Nombre)))
+        {
+            Console.WriteLine("La asignatura " + asignatura.Nombre + " ya existe");
+        }
+        else
+        {
+            asignaturas.Add(asignatura);
+            Console.WriteLine("La asignatura " + asignatura.Nombre + " fue agregada correctamente");
+        }
+    }
+
 }

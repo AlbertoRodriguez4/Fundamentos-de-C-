@@ -65,3 +65,7 @@ Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
 //Ver el reporte de un estudiante
 Console.WriteLine($"\n---Reporte de un estudiante---");
 programa.GenerarReporteCalificacion(estudiante1);
+//agregar asignaturas a una lista global
+Asignatura programación = new Asignatura("Programación", 4);
+programa.AgregarAsignatura(programación); //asignatura agregada correctamente
+programa.AgregarAsignatura(programación); //asignatura ya existente
