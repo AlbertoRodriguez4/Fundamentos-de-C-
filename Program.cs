@@ -37,7 +37,7 @@ List<Estudiante> lstEstudiantes = new List<Estudiante>();
     lstEstudiantes.Add(estudiante1);
     lstEstudiantes.Add(estudiante2);
     lstEstudiantes.Add(estudiante3);
-    
+
     foreach (var estudiante in lstEstudiantes)
     {
         estudiante.MostrarCalificaciones();
@@ -45,10 +45,6 @@ List<Estudiante> lstEstudiantes = new List<Estudiante>();
         Console.WriteLine($"Promedio de {estudiante.Nombre}: {promedio:F2}");
     }
 }
-//promedio de estudiantes globales
-double promedioGlobal = programa.CalcularPromedioGlobal();
-Console.WriteLine($"\n---Promedio global---");
-Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
 //modificar asignatura
 Console.WriteLine($"\n---Modificando nota al alumno---");
 estudiante1.modificarNotaAlumno(cliente, 9); //modificando la nota de una asignatura que el alumno cursa
@@ -62,3 +58,7 @@ Console.WriteLine($"\n---Buscando a uno o varios estudiantes---");
 programa.buscarEstudiantes("Est"); //Aparecen varios estudiantes
 programa.buscarEstudiantes("Estudiante 2"); //Aparece solo un estudiante
 programa.buscarEstudiantes("Asdf"); //No aparecen estudiantes
+//promedio de estudiantes globales
+double promedioGlobal = programa.CalcularPromedioGlobal();
+Console.WriteLine($"\n---Promedio global---");
+Console.WriteLine($"Promedio global: {promedioGlobal:F2}");

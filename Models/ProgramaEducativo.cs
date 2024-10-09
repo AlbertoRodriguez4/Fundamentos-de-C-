@@ -37,17 +37,7 @@ class ProgramaEducativo
     {
         return estudiante;
     }
-    public double CalcularPromedioGlobal()
-    {
-        double sumaPromedios = 0;
-        int contadorEstudiantes = 0;
-        foreach (var estudiante in estudiantes)
-        {
-            sumaPromedios += estudiante.CalcularPromedio();
-            contadorEstudiantes++;
-        }
-        return sumaPromedios / contadorEstudiantes;
-    }
+
     //función para eliminar a un estudiante
     public void EliminarEstudiante(string estudiante)
     {
@@ -86,5 +76,16 @@ class ProgramaEducativo
             Console.WriteLine("No se ha encontrado al o los estudiante/s");
         }
     }
-
+    //función para calcular el promedio global de todos los estudiantes y sus asignaturas
+    public double CalcularPromedioGlobal()
+    {
+        double sumaPromedios = 0;
+        int contadorEstudiantes = 0;
+        foreach (var estudiante in estudiantes)
+        {
+            sumaPromedios += estudiante.CalcularPromedio();
+            contadorEstudiantes++;
+        }
+        return sumaPromedios / contadorEstudiantes;
+    }
 }
