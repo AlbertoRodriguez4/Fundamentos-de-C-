@@ -10,6 +10,7 @@ ProgramaEducativo programa = new ProgramaEducativo();
 Asignatura servidor = new Asignatura("Servidor", 4);
 Asignatura cliente = new Asignatura("Cliente", 4);
 Asignatura diseño = new Asignatura("Diseño", 4);
+Asignatura ingles = new Asignatura("Ingles", 4);
 //Crear estudiantes
 Estudiante estudiante1 = new Estudiante("Estudiante 1");
 Estudiante estudiante2 = new Estudiante("Estudiante 2");
@@ -27,6 +28,7 @@ estudiante2.AñadirCalificacion(cliente, 7);
 estudiante2.AñadirCalificacion(diseño, 8);
 estudiante3.AñadirCalificacion(servidor, 10);
 estudiante3.AñadirCalificacion(cliente, 9);
+estudiante3.AñadirCalificacion(ingles, 10);
 //Mostrar estudiantes
 programa.MostrarEstudiantes();
 //Mostrar calificaciones de estudiantes en especifico
@@ -49,4 +51,9 @@ Console.WriteLine($"\n---Promedio global---");
 Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
 //modificar asignatura
 Console.WriteLine($"\n---Modificando nota al alumno---");
-estudiante1.modificarNotaAlumno(cliente, 9);
+estudiante1.modificarNotaAlumno(cliente, 9); //modificando la nota de una asignatura que el alumno cursa
+estudiante1.modificarNotaAlumno(ingles, 1); //modificando la nota de una asignatura que el alumno no cursa
+//eliminar a un estudiuante
+Console.WriteLine($"\n---Eliminando a un alumno---");
+programa.EliminarEstudiante("Estudiante 1"); //eliminando a un estudiante que existe
+programa.EliminarEstudiante("Paco"); //eliminando a un estudiante que no existe
