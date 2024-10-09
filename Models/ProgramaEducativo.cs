@@ -68,4 +68,23 @@ class ProgramaEducativo
             Console.WriteLine("Estudiante no encontrado");
         }
     }
+    //función para buscar uno o varios estudiantes
+    public void buscarEstudiantes(String nombre)
+    {
+        bool estudianteEncontrados = false;
+
+        foreach (var estudiante in estudiantes)
+        {
+            if (estudiante.Nombre.StartsWith(nombre))
+            {
+                Console.WriteLine("Se ha encontrado al o los estudiante/s: " + estudiante.Nombre);
+                estudianteEncontrados = true;
+            }
+        }
+        if (!estudianteEncontrados)
+        {
+            Console.WriteLine("No se ha encontrado al o los estudiante/s");
+        }
+    }
+
 }
