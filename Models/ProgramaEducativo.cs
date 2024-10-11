@@ -119,5 +119,49 @@ class ProgramaEducativo
             Console.WriteLine("La asignatura " + asignatura.Nombre + " fue agregada correctamente");
         }
     }
-
+    //función para mostrar un ranking con los estudiantes con las mejores calificaciones en promedio
+    // public void MostrarRanking(List<Estudiante> estudiantes)
+    // {
+    //     List<int> promedios = new List<int>();
+    //     foreach (var estudiante in estudiantes)
+    //     {
+    //         double x = estudiante.CalcularPromedio();
+    //         promedios.Add((int)x);
+    //         Console.WriteLine("Estudiante "+estudiante.Nombre+" con un promedio de "+estudiante.CalcularPromedio());
+    //     }
+    //     promedios.Sort();
+    //     promedios.Reverse();
+    //     Console.WriteLine("Ranking de estudiantes con mejor calificación en promedio: ");
+    //     foreach (var promedio in promedios)
+    //     {
+    //         foreach (var estudiante in estudiantes)
+    //         {
+    //             if ((int)estudiante.CalcularPromedio() == promedio)
+    //             {
+    //                 Console.WriteLine($"{estudiante.Nombre} con un promedio de {estudiante.CalcularPromedio():F2}");
+    //             }
+    //         }
+    //     }
+    // }
+    //función para mostrar un ranking con los estudiantes con las mejores calificaciones en promedio
+    public void MostrarRanking(List<Estudiante> estudiantes)
+    {
+        Dictionary<Estudiante, double> lstPromedios = new Dictionary<Estudiante, double>();
+        foreach (var estudiante in estudiantes)
+        {
+            double x = estudiante.CalcularPromedio();
+            lstPromedios.Add(estudiante, x);
+        }
+        Console.WriteLine("Ranking de estudiantes con mejor calificación en promedio: ");
+        foreach (var promedio in lstPromedios.Values)
+        {
+            foreach (var estudiante in estudiantes)
+            {
+                if (lstPromedios[estudiante] == promedio)
+                {
+                    Console.WriteLine($"{estudiante.Nombre} con un promedio de {estudiante.CalcularPromedio():F2}");
+                }
+            }
+        }
+    }
 }

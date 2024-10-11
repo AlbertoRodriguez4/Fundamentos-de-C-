@@ -72,3 +72,5 @@ programa.AgregarAsignatura(programación); //asignatura ya existente
 //Comprobación de sintaxis de nota correcta
 estudiante1.AñadirCalificacion(ingles, 10); //nota correcta
 estudiante1.AñadirCalificacion(ingles, 20); //nota incorrecta
+//Ranking del promedio de los estudiantes
+programa.MostrarRanking(lstEstudiantes);
