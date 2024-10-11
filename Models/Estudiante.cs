@@ -11,9 +11,18 @@ class Estudiante
         calificaciones = new Dictionary<Asignatura, double>();
     }
 
+    //función editada con un controlador de las calificaciones de un estudiante
     public void AñadirCalificacion(Asignatura asignatura, double calificacion)
     {
-        calificaciones[asignatura] = calificacion;
+        if (calificacion >= 0 && calificacion <= 10)
+        {
+            calificaciones[asignatura] = calificacion;
+            Console.WriteLine("Al estudiante " + Nombre + " se le ha asignado la nota de " + calificacion);
+        }
+        else
+        {
+            Console.WriteLine("La calificación no es correcta, debe ser un valor entre 0 y 10");
+        }
     }
     public void MostrarCalificaciones()
     {
