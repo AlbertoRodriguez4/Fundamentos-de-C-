@@ -37,4 +37,26 @@ class Estudiante
     {
         Console.WriteLine($"Estudiante número {x}: {Nombre}");
     }
+    //Función para modificar la calificación de una asignatura de un estudiante
+    public void modificarNotaAlumno(Asignatura asignatura, double calificacion)
+    {
+        bool asignaturaEncontrada = false;
+        
+        // Recorremos las calificaciones para buscar la asignatura
+        foreach (var entrada in calificaciones)
+        {
+            if (entrada.Key.Nombre.Equals(asignatura.Nombre))
+            {
+                Console.WriteLine("Calificación modificada de la asignatura " + entrada.Key.Nombre + " al alumno " + Nombre + ". Se le ha sustituido la nota de " + calificaciones[asignatura] + " por " + calificacion);
+                calificaciones[asignatura] = calificacion;
+                asignaturaEncontrada = true; 
+                break; 
+            }
+        }
+        if (!asignaturaEncontrada)
+        {
+            Console.WriteLine("Asignatura no encontrada");
+        }
+    }
+
 }
