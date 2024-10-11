@@ -184,4 +184,11 @@ class ProgramaEducativo
             }
         }
     }
+    //función para visualizar las asignaturas disponibles en un programa educativo, junto con sus créditos
+    public void MostrarAsignaturas() {
+        Console.WriteLine("Asignaturas disponibles:");
+        foreach (var asignatura in asignaturas) {
+            Console.WriteLine("La asignatura "+ asignatura.Nombre + " tiene un credito de " + asignatura.Creditos + " creditos");
+        }
+    }
 }

@@ -78,3 +78,7 @@ programa.MostrarRanking(lstEstudiantes);
 //personas en riesgo de supender
 Console.WriteLine($"\n---Personas con posibilidad de suspender---");
 programa.MostrarPersonasEnRiesgo(lstEstudiantes);
+//ver las asignaturas y créditos en un programa educativo
+Console.WriteLine($"\n---Asignaturas en el programa educativo---");
+programa.AgregarAsignatura(ingles);
+programa.MostrarAsignaturas();
