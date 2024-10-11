@@ -37,13 +37,35 @@ class ProgramaEducativo
     {
         return estudiante;
     }
-    public double CalcularPromedioGlobal() {
+    public double CalcularPromedioGlobal()
+    {
         double sumaPromedios = 0;
         int contadorEstudiantes = 0;
-    foreach (var estudiante in estudiantes) {
-        sumaPromedios += estudiante.CalcularPromedio();
-        contadorEstudiantes++;
-    }
+        foreach (var estudiante in estudiantes)
+        {
+            sumaPromedios += estudiante.CalcularPromedio();
+            contadorEstudiantes++;
+        }
         return sumaPromedios / contadorEstudiantes;
+    }
+    //función para eliminar a un estudiante
+    public void EliminarEstudiante(string estudiante)
+    {
+        bool estudianteEncontrado = false;
+        foreach (var est in estudiantes)
+        {
+            if (est.Nombre == estudiante)
+            {
+                Console.WriteLine("El estudiante " + estudiante + " fue eliminado");
+                estudiantes.Remove(est);
+                estudianteEncontrado = true;
+                break;
+            }
+
+        }
+        if (!estudianteEncontrado)
+        {
+            Console.WriteLine("Estudiante no encontrado");
+        }
     }
 }
