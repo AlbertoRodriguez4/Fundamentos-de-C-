@@ -153,7 +153,8 @@ class ProgramaEducativo
             lstPromedios.Add(estudiante, x);
         }
         Console.WriteLine("Ranking de estudiantes con mejor calificación en promedio: ");
-        foreach (var promedio in lstPromedios.Values)
+        var diccionarioOrdenado = lstPromedios.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+        foreach (var promedio in diccionarioOrdenado.Values)
         {
             foreach (var estudiante in estudiantes)
             {
