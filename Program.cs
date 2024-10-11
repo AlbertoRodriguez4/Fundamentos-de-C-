@@ -57,3 +57,8 @@ estudiante1.modificarNotaAlumno(ingles, 1); //modificando la nota de una asignat
 Console.WriteLine($"\n---Eliminando a un alumno---");
 programa.EliminarEstudiante("Estudiante 1"); //eliminando a un estudiante que existe
 programa.EliminarEstudiante("Paco"); //eliminando a un estudiante que no existe
+//buscar a uno o varios estudiantes
+Console.WriteLine($"\n---Buscando a uno o varios estudiantes---");
+programa.buscarEstudiantes("Est"); //Aparecen varios estudiantes
+programa.buscarEstudiantes("Estudiante 2"); //Aparece solo un estudiante
+programa.buscarEstudiantes("Asdf"); //No aparecen estudiantes
