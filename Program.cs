@@ -20,9 +20,9 @@ programa.AgregarEstudiante(estudiante1);
 programa.AgregarEstudiante(estudiante2);
 programa.AgregarEstudiante(estudiante3);
 //agregar estudiantes al programa
-estudiante1.AñadirCalificacion(servidor, 10);
-estudiante1.AñadirCalificacion(cliente, 8);
-estudiante1.AñadirCalificacion(diseño, 9);
+estudiante1.AñadirCalificacion(servidor, 1);
+estudiante1.AñadirCalificacion(cliente, 1);
+estudiante1.AñadirCalificacion(diseño, 1);
 estudiante2.AñadirCalificacion(servidor, 9);
 estudiante2.AñadirCalificacion(cliente, 7);
 estudiante2.AñadirCalificacion(diseño, 8);
@@ -37,7 +37,7 @@ List<Estudiante> lstEstudiantes = new List<Estudiante>();
     lstEstudiantes.Add(estudiante1);
     lstEstudiantes.Add(estudiante2);
     lstEstudiantes.Add(estudiante3);
-    
+
     foreach (var estudiante in lstEstudiantes)
     {
         estudiante.MostrarCalificaciones();
@@ -45,10 +45,6 @@ List<Estudiante> lstEstudiantes = new List<Estudiante>();
         Console.WriteLine($"Promedio de {estudiante.Nombre}: {promedio:F2}");
     }
 }
-//promedio de estudiantes globales
-double promedioGlobal = programa.CalcularPromedioGlobal();
-Console.WriteLine($"\n---Promedio global---");
-Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
 //modificar asignatura
 Console.WriteLine($"\n---Modificando nota al alumno---");
 estudiante1.modificarNotaAlumno(cliente, 9); //modificando la nota de una asignatura que el alumno cursa
@@ -62,3 +58,27 @@ Console.WriteLine($"\n---Buscando a uno o varios estudiantes---");
 programa.buscarEstudiantes("Est"); //Aparecen varios estudiantes
 programa.buscarEstudiantes("Estudiante 2"); //Aparece solo un estudiante
 programa.buscarEstudiantes("Asdf"); //No aparecen estudiantes
+//promedio de estudiantes globales
+double promedioGlobal = programa.CalcularPromedioGlobal();
+Console.WriteLine($"\n---Promedio global---");
+Console.WriteLine($"Promedio global: {promedioGlobal:F2}");
+//Ver el reporte de un estudiante
+Console.WriteLine($"\n---Reporte de un estudiante---");
+programa.GenerarReporteCalificacion(estudiante1);
+//agregar asignaturas a una lista global
+Asignatura programación = new Asignatura("Programación", 4);
+programa.AgregarAsignatura(programación); //asignatura agregada correctamente
+programa.AgregarAsignatura(programación); //asignatura ya existente
+//Comprobación de sintaxis de nota correcta
+estudiante1.AñadirCalificacion(ingles, 1); //nota correcta
+estudiante1.AñadirCalificacion(ingles, 20); //nota incorrecta
+//Ranking del promedio de los estudiantes
+Console.WriteLine($"\n--Ranking de estudiantes---");
+programa.MostrarRanking(lstEstudiantes);
+//personas en riesgo de supender
+Console.WriteLine($"\n---Personas con posibilidad de suspender---");
+programa.MostrarPersonasEnRiesgo(lstEstudiantes);
+//ver las asignaturas y créditos en un programa educativo
+Console.WriteLine($"\n---Asignaturas en el programa educativo---");
+programa.AgregarAsignatura(ingles);
+programa.MostrarAsignaturas();

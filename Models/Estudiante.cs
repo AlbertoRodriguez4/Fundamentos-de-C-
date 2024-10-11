@@ -11,9 +11,18 @@ class Estudiante
         calificaciones = new Dictionary<Asignatura, double>();
     }
 
+    //función editada con un controlador de las calificaciones de un estudiante
     public void AñadirCalificacion(Asignatura asignatura, double calificacion)
     {
-        calificaciones[asignatura] = calificacion;
+        if (calificacion >= 0 && calificacion <= 10)
+        {
+            calificaciones[asignatura] = calificacion;
+            Console.WriteLine("Al estudiante " + Nombre + " se le ha asignado la nota de " + calificacion);
+        }
+        else
+        {
+            Console.WriteLine("La calificación no es correcta, debe ser un valor entre 0 y 10");
+        }
     }
     public void MostrarCalificaciones()
     {
@@ -41,7 +50,7 @@ class Estudiante
     public void modificarNotaAlumno(Asignatura asignatura, double calificacion)
     {
         bool asignaturaEncontrada = false;
-        
+
         // Recorremos las calificaciones para buscar la asignatura
         foreach (var entrada in calificaciones)
         {
@@ -49,8 +58,8 @@ class Estudiante
             {
                 Console.WriteLine("Calificación modificada de la asignatura " + entrada.Key.Nombre + " al alumno " + Nombre + ". Se le ha sustituido la nota de " + calificaciones[asignatura] + " por " + calificacion);
                 calificaciones[asignatura] = calificacion;
-                asignaturaEncontrada = true; 
-                break; 
+                asignaturaEncontrada = true;
+                break;
             }
         }
         if (!asignaturaEncontrada)
@@ -58,5 +67,5 @@ class Estudiante
             Console.WriteLine("Asignatura no encontrada");
         }
     }
-
+   
 }
