@@ -20,9 +20,9 @@ programa.AgregarEstudiante(estudiante1);
 programa.AgregarEstudiante(estudiante2);
 programa.AgregarEstudiante(estudiante3);
 //agregar estudiantes al programa
-estudiante1.AñadirCalificacion(servidor, 10);
-estudiante1.AñadirCalificacion(cliente, 8);
-estudiante1.AñadirCalificacion(diseño, 9);
+estudiante1.AñadirCalificacion(servidor, 1);
+estudiante1.AñadirCalificacion(cliente, 1);
+estudiante1.AñadirCalificacion(diseño, 1);
 estudiante2.AñadirCalificacion(servidor, 9);
 estudiante2.AñadirCalificacion(cliente, 7);
 estudiante2.AñadirCalificacion(diseño, 8);
@@ -70,7 +70,11 @@ Asignatura programación = new Asignatura("Programación", 4);
 programa.AgregarAsignatura(programación); //asignatura agregada correctamente
 programa.AgregarAsignatura(programación); //asignatura ya existente
 //Comprobación de sintaxis de nota correcta
-estudiante1.AñadirCalificacion(ingles, 10); //nota correcta
+estudiante1.AñadirCalificacion(ingles, 1); //nota correcta
 estudiante1.AñadirCalificacion(ingles, 20); //nota incorrecta
 //Ranking del promedio de los estudiantes
+Console.WriteLine($"\n--Ranking de estudiantes---");
 programa.MostrarRanking(lstEstudiantes);
+//personas en riesgo de supender
+Console.WriteLine($"\n---Personas con posibilidad de suspender---");
+programa.MostrarPersonasEnRiesgo(lstEstudiantes);

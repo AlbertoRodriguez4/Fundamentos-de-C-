@@ -144,7 +144,7 @@ class ProgramaEducativo
     //     }
     // }
     //función para mostrar un ranking con los estudiantes con las mejores calificaciones en promedio
-    public void MostrarRanking(List<Estudiante> estudiantes)
+     public void MostrarRanking(List<Estudiante> estudiantes)
     {
         Dictionary<Estudiante, double> lstPromedios = new Dictionary<Estudiante, double>();
         foreach (var estudiante in estudiantes)
@@ -153,13 +153,33 @@ class ProgramaEducativo
             lstPromedios.Add(estudiante, x);
         }
         Console.WriteLine("Ranking de estudiantes con mejor calificación en promedio: ");
-        foreach (var promedio in lstPromedios.Values)
+        var diccionarioOrdenado = lstPromedios.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+        foreach (var promedio in diccionarioOrdenado.Values)
         {
             foreach (var estudiante in estudiantes)
             {
                 if (lstPromedios[estudiante] == promedio)
                 {
                     Console.WriteLine($"{estudiante.Nombre} con un promedio de {estudiante.CalcularPromedio():F2}");
+                }
+            }
+        }
+    }
+    public void MostrarPersonasEnRiesgo(List<Estudiante> estudiantes)
+    {
+        Dictionary<Estudiante, double> lstPromedios = new Dictionary<Estudiante, double>();
+        foreach (var estudiante in estudiantes)
+        {
+            double x = estudiante.CalcularPromedio();
+            lstPromedios.Add(estudiante, x);
+        }
+        foreach (var promedio in lstPromedios.Values)
+        {
+            foreach (var estudiante in estudiantes)
+            {
+                if (lstPromedios[estudiante] == promedio && lstPromedios[estudiante] < 5.00)
+                {
+                    Console.WriteLine($"{estudiante.Nombre} esta en riesgo de supender con un promedio de {estudiante.CalcularPromedio():F2}");
                 }
             }
         }
